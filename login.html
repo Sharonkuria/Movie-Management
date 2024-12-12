@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Movie app</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- stylesheet link -->
+      <link rel="stylesheet" href="{% static 'login.css' %}">
+      <link rel="stylesheet" href="{% static 'cat.css' %}">
+      <!-- icon link -->
+      <script src="https://kit.fontawesome.com/2e4ed298ac.js" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        .container{
+            position: absolute;
+        }
+        .container2{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-64%,26%);
+        }
+    </style>
+<body>
+    <!--  start-->
+    <div class="conatainer">
+        <div class = "cat">
+        <div class = "head">
+        <div class = "tail">
+            </div>
+        <div class = "left_ear">
+                <div class = "inside_left_ear">
+            </div>
+            </div>
+        <div class = "right_ear">
+                <div class = "inside_right_ear">
+            </div>
+            </div>
+        <div class = "left_eye">
+                <div class = "inside_left_eye">
+            </div>
+            </div>
+        <div class = "right_eye">
+                <div class = "inside_right_eye">
+            </div>
+            </div>
+        <div class = "left_eyelid">
+            </div>
+        <div class = "right_eyelid">
+            </div>
+            </div>  
+    </div>
+    </div>
+    <!--  end-->
+     <!-- login start-->
+    <div class="container2" col>
+        <div class="login">
+            <div class="login-triangle">
+            </div>
+        <h2 class="login-header">Log in...!</h2>
+            <form method="post" class="login-container">
+                {% csrf_token %}
+                <p><input type="name" placeholder="Username" name="username"></p>
+                <p><input type="password" placeholder="Password" name="password"></p>
+                <p><input type="submit" value="Log in"></p>
+                <b><p>Dont have an account <a style="color:green;" href="{% url 'movieapp:signup' %}">create one</a>..!</p></b>
+            </form>
+        </div> 
+    </div>
+    <!-- login end-->
+
+    <!-- javascript link start-->
+    <script src="{% static 'cat.js' %}"></script>
+    <!-- javascript link end--> 
+</body>
+</html>

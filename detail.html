@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+  {% block body %}
+  <div class="cnt2">
+  <div class="hd3">
+    <h2>Movie details</h2>
+  </div>
+    <div class="card-wrap2">
+      <div class="txt2">
+        <br><br>
+        <img src="{{movie.img.url}}" width="100" height="100">
+        <b><u>{{movie.name}}</u></b><br><br>
+        <b>About: {{movie.desc}}</b><br><br>
+        <b>Year:  {{movie.year}}</b>
+      </div>
+      <br><br>
+      <div class="btn mg-5">
+        <a style="align-items: center;margin-left:150px;" class= "btn btn-outline-secondary" href="{% url 'movieapp:update' movie.id %}">Update</a> 
+      </div>
+      <div class="btn mg-5">
+        <a style="align-items: center;margin-left:200px;" class= "btn btn-danger" href="{% url 'movieapp:delete' movie.id %}">Delete</a> 
+      </div>
+    </div>
+  </div> 
+{% endblock %}   

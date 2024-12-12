@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie app</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   {% comment %} css link {% endcomment %}
+  <link href="{% static 'movie.css' %}" rel="stylesheet" >
+  <link href="{% static 'movie2.css' %}" rel="stylesheet" >
+  <link href="{% static 'movie3.css' %}" rel="stylesheet" >
+  <link href="{% static 'add.css' %}" rel="stylesheet" >
+  <link href="{% static 'delete.css' %}" rel="stylesheet" >
+  <link href="{% static 'task.css' %}" rel="stylesheet" >
+  <script src="https://kit.fontawesome.com/2e4ed298ac.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-brands fa-mix fa-beat-fade" style="color: #f5f5f5;"></i>  Movie Mania</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      {% comment %} <span class="navbar-toggler-icon"></span> {% endcomment %}
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+      </ul>
+    </div>
+  </nav>
+  <div class="area"></div><nav class="main-menu">
+  <ul>
+    <br><br><br>
+      <li>
+          <a href="{% url 'movieapp:index' %}">
+              <i class="fa fa-home fa-2x"></i>
+              <span class="nav-text">
+                Home
+              </span>
+          </a>
+        
+      </li>
+      <br>
+      <li>
+          <a href="{% url 'movieapp:add' %}">
+              <i class="fa fa-film fa-2x"></i>
+              <span class="nav-text">
+                  Add movie
+              </span>
+          </a>
+      </li>
+      <br>
+      <li>
+          <a href="{% url "movieapp:about" %}">
+             <i class="fa fa-info fa-2x"></i>
+              <span class="nav-text">
+                  About
+              </span>
+          </a>
+      </li>
+      <br>
+      <li>
+        <a href="{% url "movieapp:signup" %}">
+             <i class="fa fa-right-to-bracket fa-2x"></i>
+             <span class="nav-text">
+                 Signup
+             </span>
+         </a>
+     </li>
+     <br>
+      <li>
+        <a href="{% url "movieapp:logout" %}">
+              <i class="fa fa-power-off fa-2x"></i>
+             <span class="nav-text">
+                 Logout
+             </span>
+         </a>
+     </li>    
+  </ul>
+</nav>
+     {% block body %}
+     {% endblock  %}
+</body>
+</html>

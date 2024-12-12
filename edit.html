@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+  {% block body %}
+  <div class="cnt4">
+    <div class="hd">
+    <h2>Update Movie</h2>
+    </div>
+    <div class="card-wrap4">
+        <div class="txt4">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+        </div>
+            <div class="btn mg-5">
+                <input type="submit" class="btn btn-outline-secondary" value="submit">    
+            </div> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/">    
+              <div class="btn mg-5">
+                  <input class="btn btn-outline-secondary" value="back">
+              </div>
+            </a>
+        </form>
+    </div>
+  </div>
+{% endblock %}   

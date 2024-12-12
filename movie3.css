@@ -1,0 +1,25 @@
+.cnt4{
+    transform: translate(38%);
+    margin-top:4%;
+}
+
+.card-wrap4{
+    transform: translate(-25%);
+    background-color: #bab4ef;
+    width:870px;
+    height:670px;
+    border-color: black;
+    border-radius:20px;
+    border-style: groove;
+}
+
+.txt4{
+    transform: translate(10%);
+    margin-top:20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.hd{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transform: translate(7%);
+}
+

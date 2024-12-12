@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(135, 105, 137);
+}
+
+.cnt{
+    transform: translate(38%);
+    margin-top:1%;
+}
+
+.card{
+    flex: 1;
+    background-color: #bab4ef;
+    width:350px;
+    height:700px;
+    border-color: black;
+    border-radius:20px;
+    border-style: groove;
+}
+
+@media screen and ( min-width:747px ) {
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .card {
+      flex: 1;
+    }
+    
+}
+
+.txt{
+    transform: translate(15%);
+    margin-bottom:50px;
+}
+.hd1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transform: translate(5%);
+}
